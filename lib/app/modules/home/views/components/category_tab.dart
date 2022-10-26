@@ -30,7 +30,9 @@ class CategoryTab extends StatelessWidget {
           ),
           CategoryTabItem(
             title: "Beverages",
-            pressFunction: () {},
+            pressFunction: () {
+              print("Beverages");
+            },
             isActive: false,
           ),
           CategoryTabItem(

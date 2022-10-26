@@ -6,14 +6,21 @@ import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
 import 'components/category_tab.dart';
+import 'components/discount_card.dart';
+import 'components/item_list.dart';
 import 'components/search_components.dart';
 import 'widgets/custom_app_bar.dart';
+import 'widgets/custom_bottom_navigation_bar.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: customAppBar(context), body: _body());
+    return Scaffold(
+      appBar: customAppBar(context),
+      body: _body(),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
+    );
   }
 }
 
@@ -23,7 +30,9 @@ _body() {
       SearchComponents(
         onChanged: ((value) {}),
       ),
-      CategoryTab()
+      const CategoryTab(),
+      const ItemList(),
+      const DiscountSection()
     ],
   );
 }

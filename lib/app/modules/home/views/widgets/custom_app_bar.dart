@@ -14,7 +14,7 @@ AppBar customAppBar(BuildContext context) {
       color: Colors.white,
     ),
     title: RichText(
-      text: TextSpan(
+      text: const TextSpan(
         children: [
           TextSpan(
             text: "Food",
