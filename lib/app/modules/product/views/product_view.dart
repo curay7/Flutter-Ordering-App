@@ -127,6 +127,17 @@ class ProductView extends GetView<ProductController> {
                                 ),
                               ],
                             ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              width: 250,
+                              height: 0.5,
+                              color: Colors.grey,
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
