@@ -25,14 +25,16 @@ class HomeView extends GetView<HomeController> {
 }
 
 _body() {
-  return Column(
-    children: <Widget>[
-      SearchComponents(
-        onChanged: ((value) {}),
-      ),
-      const CategoryTab(),
-      const ItemList(),
-      const DiscountSection()
-    ],
+  return SingleChildScrollView(
+    child: Column(
+      children: <Widget>[
+        SearchComponents(
+          onChanged: ((value) {}),
+        ),
+        const CategoryTab(),
+        const ItemList(),
+        const DiscountSection()
+      ],
+    ),
   );
 }

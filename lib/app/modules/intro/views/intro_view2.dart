@@ -8,10 +8,10 @@ import 'package:get/get.dart';
 import '../controllers/intro_controller.dart';
 import 'components/intro_body.dart';
 import 'components/intro_header.dart';
-import 'intro_view2.dart';
+import 'intro_view3.dart';
 
-class IntroView extends GetView<IntroController> {
-  const IntroView({Key? key}) : super(key: key);
+class IntroView2 extends GetView<IntroController> {
+  const IntroView2({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double size = MediaQuery.of(context).size.height;
@@ -25,13 +25,13 @@ class IntroView extends GetView<IntroController> {
                 height: size * 0.50,
                 child: Image(
                   fit: BoxFit.cover,
-                  image: AssetImage("assets/images/g1.png"),
+                  image: AssetImage("assets/images/g2.png"),
                 ),
               ),
               Column(
                 children: <Widget>[
                   Text(
-                    "Welcome to Lone Food",
+                    "Choose your product",
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.black,
@@ -43,7 +43,7 @@ class IntroView extends GetView<IntroController> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
                     child: Text(
-                      "Ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit,  consectetur adipiscing eli  eiusmod ",
+                      "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  consectetur adipiscing eli  eiusmod ",
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey[700]),
                     ),
@@ -54,20 +54,20 @@ class IntroView extends GetView<IntroController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    width: 30,
-                    height: 7,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3),
-                      color: cPrimaryColor,
-                    ),
-                  ),
-                  Container(
                     width: 7,
                     height: 7,
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                         color: Colors.grey[300],
                         borderRadius: BorderRadius.circular(30)),
+                  ),
+                  Container(
+                    width: 30,
+                    height: 7,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: cPrimaryColor,
+                    ),
                   ),
                   Container(
                     height: 7,
@@ -101,7 +101,7 @@ class IntroView extends GetView<IntroController> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.to(IntroView2());
+                      Get.to(IntroView3());
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 17),
