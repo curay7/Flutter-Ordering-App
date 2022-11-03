@@ -90,18 +90,19 @@ class IntroView3 extends GetView<IntroController> {
                     Get.toNamed("home");
                   },
                   child: Container(
-                      width: size * 0.75,
-                      margin: EdgeInsets.symmetric(horizontal: 17),
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: cPrimaryColor,
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Center(
-                        child: Text(
-                          "Get Started",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                      )),
+                    width: size * 0.75,
+                    margin: EdgeInsets.symmetric(horizontal: 17),
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: cPrimaryColor,
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Center(
+                      child: Text(
+                        "Get Started",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ),
+                  ),
                 ),
               )
             ],

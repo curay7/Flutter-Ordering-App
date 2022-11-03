@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({
@@ -36,7 +37,9 @@ class CustomBottomNavigationBar extends StatelessWidget {
             icon: SvgPicture.asset('assets/icons/Following.svg'),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed("/cart");
+            },
             icon: SvgPicture.asset('assets/icons/Glyph.svg'),
           ),
           IconButton(

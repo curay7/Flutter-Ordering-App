@@ -16,7 +16,9 @@ class CustomCircleBtn extends StatelessWidget {
       width: 40,
       height: 40,
       decoration: BoxDecoration(
-          color: cPrimaryColor, borderRadius: BorderRadius.circular(60)),
+        color: cPrimaryColor,
+        borderRadius: BorderRadius.circular(60),
+      ),
       child: IconButton(
         onPressed: function,
         icon: Icon(

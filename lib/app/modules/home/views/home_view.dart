@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 import 'components/category_tab.dart';
 import 'components/discount_card.dart';
+import 'components/item_content.dart';
+import 'components/item_content_card.dart';
 import 'components/item_list.dart';
 import 'components/search_components.dart';
 import 'widgets/custom_app_bar.dart';
@@ -18,23 +20,26 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar(context),
-      body: _body(),
+      body: _body(context),
       bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
 
-_body() {
-  return SingleChildScrollView(
-    child: Column(
-      children: <Widget>[
-        SearchComponents(
-          onChanged: ((value) {}),
+_body(context) {
+  return Column(
+    children: <Widget>[
+      SearchComponents(
+        onChanged: ((value) {}),
+      ),
+      const CategoryTab(),
+      Expanded(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [ItemList(), DiscountSection(), ItemContent()],
+          ),
         ),
-        const CategoryTab(),
-        const ItemList(),
-        const DiscountSection()
-      ],
-    ),
+      )
+    ],
   );
 }

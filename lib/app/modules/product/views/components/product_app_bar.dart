@@ -18,7 +18,10 @@ class CustomAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             CustomIconBtn(
-              widgetInsert: Icon(Icons.arrow_back_ios),
+              widgetInsert: Container(
+                margin: EdgeInsets.only(left: 5),
+                child: Icon(Icons.arrow_back_ios),
+              ),
               iconColor: Colors.black,
               iconSize: 40,
               cfunction: () {
